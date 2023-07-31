@@ -1,6 +1,6 @@
 NMSL米表管理系统-开源域名展示系统
 
-预览：http://mi.nmsl.com
+预览：http://mi.nmsl.cn
 
 主程序压缩包解压至放入网站根目录
 
