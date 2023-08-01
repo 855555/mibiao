@@ -15,14 +15,15 @@ if ($result->num_rows > 0) {
 									<div class="acard-img">
 										<button data-text="Awesome" class="abutton">
 											<!-- 域名动画部分，仅修改域名 -->
-											<span class="actual-text">
-												&nbsp;' . $row["yuming"] . '&nbsp;
-											</span>
+										 <div class="text-container">
+											<p class="overflowing">	&nbsp;' . $row["yuming"] . '&nbsp;</p>
+										  </div>
 											<!-- 可加链接跳转 -->
 											<a href="#" target="_blank" style="height: 20px;display: flex;">
-												<span class="ahover-text" aria-hidden="true">
-													&nbsp;' . $row["yuming"] . '&nbsp;
-												</span>
+											 <div class="text-container">	 <span class="ahover-text" aria-hidden="true">
+	
+											<p class="overflowing">	&nbsp;' . $row["yuming"] . '&nbsp;</p>
+										  </span> </div>
 											</a>
 										</button>
 									</div>
