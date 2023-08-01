@@ -259,15 +259,34 @@ button:focus:not(:focus-visible) {
   margin: 21px;
 }
 .acard {
-  /* width: 175px; */
+  width: 175px;
   height: 170px;
   padding: 0.8em;
   background: #f1f2ff;
-  overflow: visible;
+  overflow: hidden; /* 将overflow设置为hidden，以隐藏超出容器的内容 */
   -webkit-box-shadow: 7px 8px 9px 1px rgba(76, 76, 76, 0.12), -6px -9px 12px 4px rgba(255, 255, 255, 0.24);
   box-shadow: 7px 8px 9px 1px rgba(76, 76, 76, 0.12), -6px -9px 12px 4px rgba(255, 255, 255, 0.24);
   margin: 30px 36px;
   border-radius: 26px;
+}
+
+/* 添加文本容器样式 */
+.acard .text-container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 设置文字最小缩放比例 */
+.acard .text-container p {
+  min-width: 0;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* 当文字过长时进行缩放 */
+.acard .text-container p.overflowing {
+  transform: scale(0.9);
 }
 .acard-img {
   background-color: #f7f7ff;
@@ -364,14 +383,14 @@ svg {
   --border-right: 6px;
   --text-stroke-color: #9498cd;
   --animation-color: #9498cd;
-  --fs-size: 1.3em;
-  letter-spacing: 3px;
+  --fs-size: 1.2em;
+  letter-spacing: -1px;
   text-decoration: none;
   font-size: var(--fs-size);
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
-  margin-left: 0;
+  -webkit-text-stroke: 0.8px var(--text-stroke-color);
+
   z-index: 10;
   position: relative;
   display: flex;
